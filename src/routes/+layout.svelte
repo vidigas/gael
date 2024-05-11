@@ -6,7 +6,6 @@
   import { setupScreenSizeListener } from "../stores/screenSize";
 
   export const prerender = true;
-  export const trailingSlash = 'always'; // Added this
 
   onMount(() => {
     const cleanup = setupScreenSizeListener();
