@@ -3,7 +3,6 @@
   import type { HomeData } from "../../interfaces";
 
 	export let data: HomeData;
-
 </script>
 
 

@@ -7,7 +7,7 @@ export interface SectionData {
 
 export interface HomeData {
   imageSrc: string;
-  sections: Array<SectionData>;
+  sections: {[key: string]:SectionData };
   sectionData: SectionData;	
 }
 

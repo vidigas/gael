@@ -8,38 +8,37 @@
   }
 
   interface HomepageData {
-    sections: Array<SectionData>;
+    sections: {[key: string]:SectionData };
     activeSection: SectionData;
   }
 
-  export let sections: Array<SectionData>;
+  export let sections: {[key: string]:SectionData };
   export let activeSection: SectionData;
 </script>
 
 <div class="flex">
-  <div class="horizontal-space" />
-
-  <div class="ml-12 wrapper">
+  <div class="wrapper">
     <ul>
-      {#each Object.values(sections) || [] as section}
+      {#each Object.values(sections).filter(s => s.path !== 'ajude') || [] as section}
         <NavItem {section} {activeSection} />
       {/each}
     </ul>
-    <P size="xl" weight="light" class="mt-8 mr-12">
-      {activeSection.text}
+    <P size="xl" weight="light" class="mt-8 mr-2">
+      {@html activeSection.text.replace(/\n/g, '<br>')}
     </P>
   </div>
 </div>
 
 <style lang="scss">
-  .horizontal-space {
-    width: 200px;
-  }
   .wrapper {
-    width: 100%;
+    width: 80%;
+    min-width: 600px;
   }
   ul {
     display: flex;
+    justify-content: space-between;
     list-style: none;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FAC508;
   }
 </style>

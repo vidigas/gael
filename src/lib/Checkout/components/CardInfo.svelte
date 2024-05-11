@@ -5,7 +5,7 @@
 </script>
 
 
-<div class="form-wrapper mt-10">
+<div class="form-wrapper">
   <P class="mb-12" size="xl" weight="light">DADOS DO CARTÃO</P>
   <form>
     <div class="grid gap-6">
@@ -30,9 +30,7 @@
 
 <style lang="scss">
   .form-wrapper {
-    background-color: rgb(255, 234, 159);
     padding: 20px;
-    border-radius: 25px;
   }
 
 </style>

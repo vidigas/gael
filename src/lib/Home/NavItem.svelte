@@ -11,7 +11,7 @@
   $: active = section.title === activeSection.title
 
 </script>
-<li>
+<li class={active ? "active" : undefined}>
   <A href={section.path} class="hover:no-underline">
     {#if active}
     <P
@@ -32,9 +32,11 @@
 
 
 <style lang="scss">
-      li {
-      margin-right: 25px;
+    li {
       color: rgb(30, 30, 30);
       cursor: pointer;
+    }
+    .active {
+      border-top: 2px solid #FAC508;
     }
 </style>

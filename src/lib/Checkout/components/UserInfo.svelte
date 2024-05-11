@@ -20,22 +20,22 @@
         <Input type="text" id="name" placeholder="" required />
       </div>
       <div class="-mt-2">
-        <Label for="last_name" class="mb-1">Sobrenome</Label>
+        <Label for="last_name" class="mb-1">sobrenome</Label>
         <Input type="text" id="last_name" placeholder="" />
       </div>
       <div class="-mt-2 select">
         <Label>
-          Pessoa
+          pessoa
           <Select class="mt-1" items={countries} bind:value={selected} />
         </Label>
       </div>
       <div class="-mt-2">
-        <Label for="cpf" class="mb-1">CPF/CNPJ</Label>
+        <Label for="cpf" class="mb-1">cpf/cnpj</Label>
         <Input type="text" id="last_name" placeholder="" required />
       </div>
       
       <div class="-mt-2 mb-6">
-        <Label for="email" class="mb-1">Email</Label>
+        <Label for="email" class="mb-1">email</Label>
         <Input type="email" id="email" placeholder="" required />
       </div>
     </div>
@@ -45,7 +45,6 @@
 
 <style lang="scss">
   .form-wrapper {
-    background-color: rgb(255, 234, 159);
     padding: 20px;
     border-radius: 25px;
     .select {

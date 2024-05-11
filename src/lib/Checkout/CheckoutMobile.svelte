@@ -7,10 +7,9 @@
   import LinkButton from "$lib/UI/LinkButton.svelte";
 </script>
 
-<div class="ml-12 mr-12 grid grid-cols-2 gap-20">
+<div>
   <div>
     <UserInfo />
-    <TermsAndConditions />
   </div>
   <div>
     <CardInfo />
@@ -20,6 +19,7 @@
         <P size="2xl" align="center" weight="semibold" color="white"> DOAR </P>
       </LinkButton>
     </div>
+    <TermsAndConditions />
   </div>
 </div>
 

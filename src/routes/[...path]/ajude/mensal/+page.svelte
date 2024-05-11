@@ -2,19 +2,22 @@
   import Donation from "$lib/Donation/Donation.svelte";
   import { DonationType } from "../../../../interfaces";
 
+  import { onDestroy } from 'svelte';
+  import { isMobile } from "../../../../stores/screenSize";
+import DonationMobile from "$lib/Donation/DonationMobile.svelte";
+
+  let isMobileValue: boolean = false;
+  const unsubscribe = isMobile.subscribe(value => {
+    isMobileValue = value;
+  });
+
+onDestroy(() => {
+  unsubscribe();
+});
+
 </script>
-
-<Donation type={DonationType.MENSAL} />
-
-<style lang="scss">
-  .button-wrapper {
-    display: flex;
-    button {
-      margin-right: 25px;
-    }
-  }
-  .other-button-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-</style>
+{#if isMobileValue}
+  <DonationMobile type={DonationType.MENSAL} />
+{:else}
+  <Donation type={DonationType.MENSAL} />
+{/if}

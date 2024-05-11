@@ -6,8 +6,8 @@
   export let onClickOther: () => void;
 </script>
 
-<div class="button-wrapper mt-12 flex">
-  <div class="button mr-8">
+<div class="button-wrapper mt-2">
+  <div class="button">
     <LinkButton src="/ajude/unica/25/checkout">
       <div class="flex">
         <P size="lg" class="mt-8 ml-3"  weight="thin" color="white">R$</P>
@@ -15,7 +15,7 @@
       </div>
     </LinkButton>
   </div>
-  <div class="button mr-8">
+  <div class="button">
     <LinkButton src="/ajude/unica/50/checkout">
       <div class="flex">
         <P size="lg" class="mt-8 ml-3"  weight="thin" color="white">R$</P>
@@ -23,7 +23,7 @@
       </div>
     </LinkButton>
   </div>
-  <div class="button mr-8">
+  <div class="button">
     <LinkButton src="/ajude/unica/100/checkout">
       <div class="flex">
         <P size="lg" class="mt-8 ml-3"  weight="thin" color="white">R$</P>
@@ -31,7 +31,7 @@
       </div>
     </LinkButton>
   </div>
-  <div class="button mr-8">
+  <div class="button">
     <LinkButton src="/ajude/unica/200/checkout">
       <div class="flex">
         <P size="lg" class="mt-8 ml-3"  weight="thin" color="white">R$</P>
@@ -41,10 +41,7 @@
   </div>
 </div>
 <div class="button-wrapper flex flex-row">
-  <div class="vertical-space" />
-  <div class="vertical-space" />
-  <div class="vertical-space" />
-  <div class="mr-6">
+  <div class="button">
     <Button on:click={onClickOther}>
       <P size="2xl" weight="bold" color="white" align="center">outro valor</P>
     </Button>
@@ -60,5 +57,10 @@
   .button-wrapper {
     width: 100%;
     justify-content: center;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

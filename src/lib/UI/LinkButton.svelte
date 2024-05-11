@@ -6,17 +6,20 @@
 	a.button-like {
 			display: inline-block;
 			align-items: center;
-			background-color: rgba(250, 197, 8, 1);
-			height: 100px;
-			border-radius: 15px;
-			border: none;
+			border: 2px solid rgba(250, 197, 8, 1);
+			min-height: 60px;
+			border-radius: 5px;
 			text-align: center;
 			padding: 10px 20px; /* Adjust padding as needed */
-			margin: 25px 25px 25px 0;
-			width: 180px;
+			margin-top: 25px;
+			min-width: 180px;
+			width: fit-content;
 			cursor: pointer;
+			font-size: large;
 			text-decoration: none; /* Remove underlines from links */
-			color: white;
+		&:hover {
+			background-color: rgba(250, 197, 8, 1);
+		}
 	}
 </style>
 
