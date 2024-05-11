@@ -5,8 +5,10 @@
   import { onMount } from 'svelte';
   import { setupScreenSizeListener } from "../stores/screenSize";
 
+  export const prerender = true;
+  export const trailingSlash = 'always'; // Added this
+
   onMount(() => {
-    console.log('salve caralhooo')
     const cleanup = setupScreenSizeListener();
 
     // Cleanup the event listener when the layout is destroyed
